@@ -1,24 +1,91 @@
-// Navegação suave entre as seções
-const links = document.querySelectorAll('nav ul li a');
+// -------------------------------
+// 1. Destacar página atual no menu
+// -------------------------------
+const currentPage = window.location.pathname.split("/").pop();
+const menuLinks = document.querySelectorAll(".navbar a");
 
-links.forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    const section = document.querySelector(link.getAttribute('href'));
-    section.scrollIntoView({ behavior: 'smooth' });
-  });
+menuLinks.forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
 });
 
-// Efeito simples de destaque no menu
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section');
-  let scrollPos = window.scrollY + 200;
+// Adiciona um pequeno efeito visual à classe active
+document.head.insertAdjacentHTML(
+  "beforeend",
+  `
+<style>
+.navbar a.active {
+  color: #e50914;
+  text-shadow: 0 0 10px #e50914;
+}
+.navbar a.active::after {
+  width: 100%;
+}
+</style>
+`
+);
 
-  sections.forEach(sec => {
-    if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
-      links.forEach(a => a.classList.remove('active'));
-      const id = sec.getAttribute('id');
-      document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+
+// -------------------------------
+// 2. Fade-in dos elementos ao rolar
+// -------------------------------
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
     }
   });
 });
+
+document.querySelectorAll(".secao").forEach(sec => {
+  sec.classList.add("hidden");
+  observer.observe(sec);
+});
+
+// CSS inserido automaticamente:
+document.head.insertAdjacentHTML(
+  "beforeend",
+  `
+<style>
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+`
+);
+
+
+// -------------------------------
+// 3. Navbar que muda ao rolar
+// -------------------------------
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+// CSS do efeito:
+document.head.insertAdjacentHTML(
+  "beforeend",
+  `
+<style>
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 12px 40px;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+</style>
+`
+);
