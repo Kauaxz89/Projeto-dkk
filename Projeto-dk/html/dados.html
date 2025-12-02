@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Os Dados – Netflix</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Dossiê Netflix</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="logica.html">A Lógica</a></li>
+      <li><a href="dados.html">Os Dados</a></li>
+      <li><a href="visual.html">O Visual</a></li>
+      <li><a href="sobre.html">Sobre Nós</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="secao">
+    <h2>Os Dados — Modelo de Banco</h2>
+    <img src="assets/img/diagrama-projeto.jpeg" class="mockup">
+   <p>As tabelas essenciais incluem <strong>Usuário</strong>, <strong>Título</strong>, <strong>Histórico</strong> e <strong>Recomendação</strong>.</p>
+
+<p>O Diagrama Entidade-Relacionamento (DER) representa como os dados principais do sistema de recomendação são organizados e conectados. 
+Embora a Netflix real utilize um sistema muito mais complexo, este modelo foi simplificado para atender somente às necessidades do trabalho, 
+focando na estrutura mínima necessária para gerar recomendações personalizadas.</p>
+
+<p>O DER demonstra como as informações são distribuídas e como cada entidade se relaciona com as demais. 
+No modelo criado, trabalhamos com cinco entidades principais:</p>
+
+<p><strong>2. Conteúdo:</strong></p>
+<p>Representa todos os filmes, séries e produções disponíveis no catálogo da plataforma. 
+Cada conteúdo pertence a um gênero específico, mas pode aparecer no histórico de diversos usuários.</p>
+
+<p><strong>3. Gênero:</strong></p>
+<p>Responsável por classificar cada conteúdo, como ação, drama, comédia, romance, entre outros. 
+Um único gênero pode estar associado a vários conteúdos diferentes.</p>
+
+<p><strong>4. Histórico de Visualização:</strong></p>
+<p>Registra tudo o que cada usuário assiste. 
+Essa entidade faz a ligação entre <strong>Usuário</strong> e <strong>Conteúdo</strong>, armazenando informações importantes para o algoritmo, 
+como data, horário e tempo assistido.</p>
+
+<p><strong>5. Recomendação:</strong></p>
+<p>Mostra quais títulos foram sugeridos aos usuários com base no perfil e comportamento de cada um. 
+Cada recomendação conecta um usuário a um conteúdo que o sistema considera relevante para ele.</p>
+
+  </section>
+</main>
+
+</body>
+</html>

@@ -1,32 +1,62 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dossiê Digital – Netflix</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-
   <header>
     <nav class="navbar">
       <div class="logo">Dossiê Netflix</div>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="logica.html">A Lógica</a></li>
-        <li><a href="dados.html">Os Dados</a></li>
-        <li><a href="visual.html">O Visual</a></li>
-        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#logica">A Lógica</a></li>
+        <li><a href="#dados">Os Dados</a></li>
+        <li><a href="#visual">O Visual</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="secao">
+    <section id="home" class="secao">
       <h1>Sistema de Recomendação da Netflix</h1>
       <p>Este site apresenta a engenharia reversa conceitual sobre como funciona o algoritmo de recomendação da Netflix.</p>
     </section>
+
+    <section id="logica" class="secao">
+      <h2>A Lógica — Fluxograma</h2>
+      <img src="assets/fluxograma.png" alt="Fluxograma Netflix" class="mockup" />
+      <p>O algoritmo analisa histórico, preferências, obras similares e tendências para gerar recomendações personalizadas.</p>
+    </section>
+
+    <section id="dados" class="secao">
+      <h2>Os Dados — Modelo de Banco</h2>
+      <img src="assets/der.png" alt="DER Netflix" class="mockup" />
+      <p>As tabelas essenciais incluem Usuário, Título, Histórico e Recomendação.</p>
+    </section>
+
+    <section id="visual" class="secao">
+      <h2>O Visual — Mockups</h2>
+      <img src="assets/mockup1.png" alt="Tela mockup" class="mockup" />
+      <img src="assets/mockup2.png" alt="Tela mockup" class="mockup" />
+    </section>
+
+    <section id="sobre" class="secao">
+      <h2>Sobre Nós</h2>
+      <div class="bio">
+        <img src="assets/avatar1.png" class="avatar" />
+        <p>Davi — Modelagem de Dados & Estrutura Lógica</p>
+      </div>
+      <div class="bio">
+        <img src="assets/avatar2.png" class="avatar" />
+        <p>Integrante 2 — Visual & Web Design</p>
+      </div>
+    </section>
   </main>
 
+  <script src="scripts/main.js"></script>
 </body>
 </html>
