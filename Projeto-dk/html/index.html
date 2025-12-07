@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -8,11 +8,12 @@
 </head>
 <body>
 
-  <header>
+  <header class="header">
     <nav class="navbar">
       <div class="logo">Dossiê Netflix</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="logica.html">A Lógica</a></li>
         <li><a href="dados.html">Os Dados</a></li>
         <li><a href="visual.html">O Visual</a></li>
@@ -21,14 +22,29 @@
     </nav>
   </header>
 
-  <main>
-    <section class="secao">
-      <h1>Sistema de Recomendação da Netflix</h1>
-      <p>Este site apresenta a engenharia reversa conceitual sobre como funciona o algoritmo de recomendação da Netflix.
-        O sistema de recomendação da Netflix é um dos mais avançados do mundo. Ele foi criado para descobrir automaticamente quais filmes e séries têm mais chance de agradar cada usuário, mesmo que duas pessoas assistam exatamente ao mesmo título.
-A Netflix faz isso combinando grandes volumes de dados, inteligência artificial, estatísticas e comportamento individual de cada usuário.
-      </p>
+  <main class="main-content">
+
+    <section class="hero secao fade-in">
+      <div class="hero-content">
+        <h1>Sistema de Recomendação da Netflix</h1>
+
+        <p class="texto-destaque">
+          Este dossiê digital apresenta uma análise conceitual do funcionamento do sistema de recomendação da Netflix, revelando como a plataforma personaliza conteúdos para milhões de usuários em tempo real.
+        </p>
+
+        <p>
+          O algoritmo da Netflix é considerado um dos mais sofisticados do mundo. Ele combina grandes volumes de dados, inteligência artificial, modelos estatísticos e padrões de comportamento do usuário para prever, com alta precisão, quais filmes e séries têm maior chance de agradar cada perfil — mesmo quando diferentes pessoas assistem aos mesmos títulos.
+        </p>
+
+        <p>
+          Através deste site, você irá explorar como esses mecanismos funcionam nos bastidores e entender como a tecnologia transforma dados em escolhas personalizadas.
+        </p>
+      </div>
+
+      <!-- Área preparada para imagem futuramente -->
+      <div class="hero-image placeholder-img"></div>
     </section>
+
   </main>
 
 </body>

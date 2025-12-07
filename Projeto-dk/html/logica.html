@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Lógica – Netflix</title>
+  <title>A Lógica – Dossiê Netflix</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-<header>
+<header class="header">
   <nav class="navbar">
     <div class="logo">Dossiê Netflix</div>
-    <ul>
+
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="logica.html">A Lógica</a></li>
+      <li><a href="logica.html" class="active">A Lógica</a></li>
       <li><a href="dados.html">Os Dados</a></li>
       <li><a href="visual.html">O Visual</a></li>
       <li><a href="sobre.html">Sobre Nós</a></li>
@@ -21,12 +22,29 @@
   </nav>
 </header>
 
-<main>
-  <section class="secao">
-    <h2>A Lógica — Fluxograma</h2>
-    <img src="assets/fluxograma.png" class="mockup">
-    <p>O algoritmo analisa histórico, preferências, obras similares e tendências para gerar recomendações personalizadas.</p>
+<main class="main-content">
+
+  <section class="secao fade-in">
+
+    <h1>Lógica do Sistema de Recomendação</h1>
+
+    <p class="texto-destaque">
+      O fluxo lógico do sistema de recomendação da Netflix é baseado na análise contínua do comportamento do usuário, combinando dados históricos, padrões de consumo e similaridade entre conteúdos.
+    </p>
+
+    <!-- Área de imagem do fluxograma -->
+    <img src="assets/fluxograma.png" alt="Fluxograma do algoritmo" class="mockup">
+
+    <p>
+      O algoritmo observa o que o usuário assiste, por quanto tempo, em quais trechos ele pausa ou abandona um conteúdo, e compara esses dados com perfis semelhantes. A partir disso, ele constrói uma cadeia de decisões inteligentes que resultam em sugestões altamente personalizadas.
+    </p>
+
+    <p>
+      Esse processo é constantemente ajustado por modelos de aprendizado de máquina, que refinam as previsões a cada nova interação registrada na plataforma.
+    </p>
+
   </section>
+
 </main>
 
 </body>
